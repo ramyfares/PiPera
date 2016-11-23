@@ -1,0 +1,138 @@
+/* INVERSED */
+.inverse,
+.inversed {
+  $inversed-bg: $clrgrey-black;
+  $inversed-color: rgba($clrwhite, 0.7);
+
+  background-color: $inversed-bg;
+  color: $inversed-color;
+
+  // GENERIC
+  ::-moz-selection { /* Code for Firefox */
+    color: $inversed-bg;
+    background: rgba($inversed-color, 0.5);
+  }
+  ::selection {
+    color: $inversed-bg;
+    background: rgba($inversed-color, 0.5);
+  }
+  p,
+  small,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $inversed-color;
+  }
+
+  a,
+  a:hover {
+    color: $clrwhite;
+  }
+
+  // FORM
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=number],
+  input[type=date],
+  input[type=month],
+  input[type=week],
+  input[type=time],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=tel],
+  input[type=url],
+  input[type=color],
+  input[type=range],
+  input[type=search],
+  input[type=file],
+  textarea,
+  select {
+    border: solid rgba($clrwhite, 0.4);
+    background-color: transparent;
+    border-width: 1px;
+
+    &:hover {
+      border-color: $inversed-color;
+      background-color: transparent;
+    }
+
+    &:focus {
+      border-color: $inversed-color;
+      background-color: transparent;
+    }
+
+  }
+  input[type=radio],
+  input[type=checkbox] {
+
+    + label { // LABEL COMES AFTER, AND ONLY AFTER
+      cursor: pointer;
+
+      span {
+        border: 1px solid $inversed-color;
+      }
+
+    }
+
+  }
+  input[type=radio] {
+
+    &:checked {
+
+      + label {
+
+        span {
+          @include radio-bullet($inversed-color);
+
+          // background-image: url('../images/inversed/radio-bullet.svg');
+        }
+
+      }
+
+    }
+
+  }
+  input[type=checkbox] {
+
+    &:checked {
+
+      + label {
+
+        span {
+          @include checkbox-check($inversed-bg, $inversed-color);
+
+          // background-image: url('../images/inversed/checkbox-check.svg');
+        }
+
+      }
+
+    }
+
+  }
+  button,
+  input[type=submit],
+  input[type=button],
+  .button,
+  .btn-default,
+  .btn {
+    background-color: $clrwhite;
+    color: $inversed-bg;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($clrwhite, 0.8);
+      color: $inversed-bg;
+    }
+
+    &.disabled {
+      background-color: $clrgrey;
+      color: $clrgrey-darker;
+    }
+
+  }
+
+}

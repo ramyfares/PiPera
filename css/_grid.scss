@@ -1,0 +1,77 @@
+@function function-grid($grid-part, $grid-all){
+	@return 100% * $grid-part / $grid-all
+}
+
+$gridDivision: (10, 12, 16); // CUSTOM NUMBER OF COLUMNS
+
+
+/* MEDIA QUERIES */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px) {
+
+	@each $grid-all in $gridDivision {
+
+		@for $grid-part from 1 through $grid-all {
+
+			.grid-tablet-#{$grid-part}of#{$grid-all},
+			.grid-pc-#{$grid-part}of#{$grid-all} {
+			}
+
+			.grid-mobile-#{$grid-part}of#{$grid-all} {
+				width: function-grid($grid-part, $grid-all);
+			}
+
+		}
+
+	}
+
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width: 768px) {
+
+	@each $grid-all in $gridDivision {
+
+		@for $grid-part from 1 through $grid-all {
+
+			.grid-mobile-#{$grid-part}of#{$grid-all},
+			.grid-pc-#{$grid-part}of#{$grid-all} {
+			}
+
+			.grid-tablet-#{$grid-part}of#{$grid-all} {
+				width: function-grid($grid-part, $grid-all);
+			}
+
+		}
+
+	}
+
+}
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width: 992px) {
+
+	@each $grid-all in $gridDivision {
+
+		@for $grid-part from 1 through $grid-all {
+
+			.grid-mobile-#{$grid-part}of#{$grid-all},
+			.grid-tablet-#{$grid-part}of#{$grid-all} {
+
+			}
+
+			.grid-pc-#{$grid-part}of#{$grid-all} {
+				width: function-grid($grid-part, $grid-all);
+			}
+
+		}
+
+	}
+
+}
+/* Desktops and laptops ----------- */
+// @media only screen
+// and (min-width: 1200px) {
+//
+// }

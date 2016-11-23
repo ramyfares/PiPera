@@ -1,0 +1,120 @@
+/* TABS VERTICAL */
+.tabs-v {
+  display: flex;
+  flex-direction: row;
+
+  .tabs-select {
+    flex: 0 1 auto;
+    border-right: 1px solid $clrgrey-lighter;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: block;
+        position: relative;
+
+        a {
+          display: block;
+          padding: 0.5em;
+        }
+
+        &.selected {
+
+          a {
+            color: $clrgrey;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .tabs-panel {
+    flex: 0 1 auto;
+    padding: 0.5em;
+  }
+
+}
+
+/* TABS HORIZONTAL */
+.tabs-h {
+  display: flex;
+  flex-direction: column;
+
+  .tabs-select {
+    flex: 0 1 auto;
+    border-bottom: 1px solid $clrgrey-lighter;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        flex: 1 1 auto;
+
+        a {
+          display: block;
+          padding: 0.5em;
+          text-align: center;
+        }
+
+        &.selected {
+
+          a {
+            color: $clrgrey;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .tabs-panel {
+    flex: 0 1 auto;
+    padding: 0.5em;
+  }
+
+}
+
+/* AJAX LOADER CONTENTS */
+.ajax-trigger {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+
+  a {
+    flex: 1 1 auto;
+  }
+}
+.ajax-content {
+}
+
+/* MEDIA QUERIES */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px) {
+
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width: 768px) {
+
+}
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width: 992px) {
+
+}
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width: 1200px) {
+
+}

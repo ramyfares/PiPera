@@ -1,0 +1,44 @@
+/* USABLE COLORS */
+
+/* MAIN COLOR */
+$clrmain: #056;
+
+/* SECONDARY COLOR */
+$clr2nd: adjust-color($clrmain, $hue: 180deg, $saturation: -10, $lightness: 40);
+
+/* TERTIARY COLOR */
+$clr3rd: adjust-color($clrmain, $hue: 270deg, $saturation: -80, $lightness: 40);
+
+/* GREY */
+$clrgrey: #aaa;
+
+/* BLACK & WHITE */
+$clrwhite: #fff;
+$clrblack: #000;
+
+/* CONTROL MAIN COLOR VARIATIONS */
+$clrmain-lighter: lighten($clrmain, 5%);
+$clrmain-darker: darken($clrmain, 5%);
+
+/* CONTROL SECONDARY COLOR VARIATIONS */
+$clr2nd-lighter: lighten($clr2nd, 5%);
+$clr2nd-darker: darken($clr2nd, 5%);
+
+/* CONTROL TERTIARY COLOR VARIATIONS */
+$clr3rd-lighter: lighten($clr3rd, 5%);
+$clr3rd-darker: darken($clr3rd, 5%);
+
+/* CONTROL GREY VARIATIONS */
+$clrgrey-lighter: lighten($clrgrey, 15%);
+$clrgrey-darker: darken($clrgrey, 15%);
+
+/* CONTROL GREY EXTREMES */
+$clrgrey-white: lighten($clrgrey, 30%);
+$clrgrey-black: darken($clrgrey, 55%);
+
+/* SPECIAL COMMENTS */
+$clr-comment: #bbb; // NEUTRAL
+$clr-comment-success: #9d8; // GREEN
+$clr-comment-warning: #ec7; // YELLOW
+$clr-comment-danger: #e9a; // RED
+$clr-comment-custom: $clrmain; // CUSTOM

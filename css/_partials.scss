@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/* BREADCRUMBS */
+.breadcrumb,
+.breadcrumbs,
+.bread-crumbs {
+  display: flex;
+  justify-content: flex-start;
+
+  > * {
+    flex: 0 1 auto;
+    font-weight: bolder;
+    padding-left: 0;
+
+    a {
+      padding: 0.5em;
+      display: inline-block;
+      line-height: 2em;
+    }
+
+    &:after {
+      content: "›";
+      margin-left: 0.25em;
+    }
+
+    &.current {
+
+      a {
+        cursor: default;
+        color: $clrgrey-black;
+      }
+      &:after {
+        content: '';
+      }
+    }
+
+  }
+
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  > * {
+    flex: 0 1 auto;
+    font-weight: bolder;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+
+    a {
+      padding: 0.5em;
+      display: block;
+      line-height: 1em;
+    }
+
+  }
+
+  .current {
+
+    a {
+      cursor: default;
+      color: $clrgrey-black;
+    }
+
+  }
+
+  .disabled {
+
+    a {
+      cursor: not-allowed;
+      color: $clrgrey;
+    }
+
+  }
+
+}
+
+/* TAGS */
+.tags {
+
+  a {
+    display: inline-block;
+    color: $clrwhite;
+    background-color: $clrmain;
+    padding: 0.25em 0.5em;
+
+    &:hover {
+      background-color: $clrmain-darker;
+    }
+
+  }
+
+  .tag-hide {
+    margin-left: 0.5em;
+  }
+
+}
+
+/* SOCIAL MEDIA */
+.social-media {
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+$socialSite: (fb, tw, yt, ig, tm, pn);
+
+@each $socialIcon in $socialSite {
+
+  .social-#{$socialIcon} {
+    width: 2em;
+    height: 2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/icons/social-solid-#{$socialIcon}.svg');
+
+    &:hover {
+      background-image: url('../images/icons/social-greyline-#{$socialIcon}.svg');
+    }
+  }
+
+}

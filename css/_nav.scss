@@ -1,0 +1,105 @@
+/* MAIN NAVIGATION */
+nav {
+  flex: 0 1 auto;
+  order: 12;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    li {
+      position: relative;
+      display: block;
+      padding: 0.25rem 1rem;
+      text-align: center;
+      flex: 0 1 auto;
+
+      a {
+        display: inline-block;
+      }
+
+    }
+
+  }
+
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+
+  > a {
+    background-image: url(../images/icons/arrow-down-grey.png);
+    background-position: right center;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    padding-right: 1.75rem;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    min-width: 160px;
+    background-color: $clrgrey-white;
+    box-shadow: 0 1px 2px 0 rgba($clrblack, 0.2);
+  }
+
+}
+
+/* NAVIGATION STACKS (HAMBURGER) */
+#nav-stacks {
+  flex: 0 1 2rem;
+  order: 11;
+
+  border: 1px solid $clr2nd;
+  height: auto;
+  width: 2rem;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  margin: 0.25rem 0.25rem;
+
+  span {
+    background-color: $clr2nd;
+    margin: 0.25rem auto;
+    height: 0.25rem;
+    width: 1.5rem;
+    display: block;
+    transition: 0.2s all ease;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $clr2nd-lighter;
+
+    span {
+      background-color: $clr2nd-lighter;
+    }
+
+  }
+
+  &.open { // ANIMATE STACKS
+
+    span {
+
+      &:first-of-type {
+        transform: translate(0, 0.5rem) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        transform: translate(0, -0.5rem) rotate(-45deg);
+      }
+
+    }
+
+  }
+
+}

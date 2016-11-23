@@ -1,0 +1,12 @@
+/* COLUMNS */
+.columns {
+
+  // @include column-count(3);
+
+  @include column-gap(1rem);
+
+  @include column-rule(1px solid rgba($clrgrey, 0.2));
+
+  @include column-width(240px);
+
+}

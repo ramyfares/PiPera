@@ -1,0 +1,302 @@
+/* SLIDER */
+.flexslider { // MAIN AREA
+  margin: 0 0 3rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  height: auto;
+  background-color: rgba($clrblack, 0.1);
+
+  .slides { // ALL SLIDES
+
+    li { // EACH SLIDE
+      height: auto;
+      position: relative;
+
+      .caption-overlay { // CAPTION ON THE SLIDE
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .caption {
+          background-color: rgba($clrblack, 0.3);
+          flex: 0 0 auto;
+          padding: 1em;
+        }
+
+        * {
+          color: $clrwhite;
+        }
+
+      }
+
+    }
+
+  }
+
+  .flex-direction-nav { // NAVIGATION DIRECTION
+
+    a { // EACH DIRECTION
+
+      &:before {
+        content: '';
+      }
+
+      &.flex-next:before {
+        content: '';
+      }
+
+    }
+
+    .flex-prev,
+    .flex-next { // PREVIOUS AND NEXT
+      width: 2rem;
+      height: 2rem;
+      background-position: center;
+      background-size: contain;
+      font-size: 0em;
+      opacity: 0;
+    }
+
+    .flex-prev { // PREVIOUS
+      left: 1rem;
+      background-image: url('../images/controls/prev.png');
+      background-image: url('../images/controls/prev.svg');
+    }
+
+    .flex-next { // NEXT
+      right: 1rem;
+      background-image: url('../images/controls/next.png');
+      background-image: url('../images/controls/next.svg');
+    }
+
+  }
+
+  .flex-control-nav { // NAVIGATION CONTROLS
+    bottom: -2rem;
+
+    li {
+      margin: 0 0.5rem;
+
+      a { // EACH CONTROL
+        width: 0.75rem;
+        height: 0.75rem;
+        background: transparent;
+        border-radius: 50%;
+        border: 2px solid ;
+        border-color: $clr2nd;
+        box-shadow: none;
+        transition: 0.5s all ease;
+
+        &:hover {
+          background: transparent;
+          border-color: $clr2nd-lighter;
+        }
+
+        &.flex-active {
+          background: $clrgrey;
+          border-color: $clrgrey-darker;
+        }
+
+      }
+
+    }
+
+  }
+
+  &:hover {
+
+    .flex-direction-nav {
+
+      .flex-prev {
+        opacity: 0.7;
+        left: 0.5rem;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+
+      .flex-next {
+        opacity: 0.7;
+        right: 0.5rem;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* FANCYBOX */
+/* MARKUP */
+a.fancybox {
+  img {
+    width: 100%;
+  }
+}
+/* CUSTOMIZING */
+.fancybox-skin {
+  background-color: transparent;
+  color: inherit;
+}
+#fancybox-loading div { // LOADING BEHIND DISPLAYED IMAGE
+  width: 30rem;
+  height: 30rem;
+	background-image: url('../images/controls/loading.gif');
+}
+.fancybox-close { // CLOSE BUTTON
+  background-size: 2rem 2rem;
+  background-image: url('../images/controls/close.png');
+  background-image: url('../images/controls/close.svg');
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
+.fancybox-outer { // FRAME OF DISPLAYED IMAGE
+
+  .fancybox-nav { // NAVIGATION RIGHT AND LEFT
+    width: 3rem;
+    opacity: 0;
+  }
+  .fancybox-prev,
+  .fancybox-next { // PREVIOUS & NEXT
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .fancybox-prev { // PREVIOUS
+    background-image: url('../images/controls/left.png');
+    background-image: url('../images/controls/left.svg');
+  }
+  .fancybox-next { // NEXT
+    background-image: url('../images/controls/right.png');
+    background-image: url('../images/controls/right.svg');
+  }
+
+  &:hover {
+    .fancybox-nav {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+}
+.fancybox-title { // TITLE BELOW DISPLAYED IMAGE
+  font-family: inherit;
+  background-color: rgba($clrblack, 0.6);
+  color: $clrwhite;
+  font-weight: bolder;
+  padding: 0.5em;
+}
+.fancybox-overlay { // DIM BEHIND DISPLAYED IMAGE
+  background-color: rgba($clrblack, 0.5);
+  background-image: none;
+}
+
+/* Slick CAROUSEL */
+/* SLICK THEME */
+.carousel {
+
+  .slick-prev,
+  .slick-next {
+    top: calc(50% - 0rem);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 99;
+    opacity: 0;
+
+    &:before,
+    &:after {
+      content: '';
+    }
+
+  }
+  .slick-prev {
+    left: 1rem;
+    background-image: url('../images/controls/left.png');
+    background-image: url('../images/controls/left.svg');
+  }
+  [dir='rtl'] .slick-prev {
+    right: 1rem;
+    left: auto;
+    background-image: url('../images/controls/right.png');
+    background-image: url('../images/controls/right.svg');
+  }
+  .slick-next {
+    right: 1rem;
+    background-image: url('../images/controls/right.png');
+    background-image: url('../images/controls/right.svg');
+  }
+  [dir='rtl'] .slick-next {
+    right: auto;
+    left: 1rem;
+    background-image: url('../images/controls/left.png');
+    background-image: url('../images/controls/left.svg');
+  }
+
+  &:hover,
+  &:focus {
+
+    .slick-prev,
+    .slick-next {
+      opacity: 0.8;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+}
+.slick-slide {
+
+  img {
+    width: 100%;
+  }
+
+}
+.carousel-slide {
+  position: relative;
+
+  .carousel-image {}
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    background-color: rgba($clrblack, 0.4);
+    color: $clrwhite;
+  }
+
+}

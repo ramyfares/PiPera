@@ -1,0 +1,68 @@
+/* COLUMNS */
+@mixin column-count($cln-count) {
+	-moz-column-count: $cln-count; /* Firefox */
+	-webkit-column-count: $cln-count; /* Safari and Chrome */
+	column-count: $cln-count;
+}
+
+@mixin column-width($cln-width) {
+	-moz-column-width: $cln-width; /* Firefox */
+	-webkit-column-width: $cln-width; /* Safari and Chrome */
+	column-width: $cln-width;
+}
+
+@mixin column-gap($cln-gap) {
+	-moz-column-gap: $cln-gap; /* Firefox */
+	-webkit-column-gap: $cln-gap; /* Safari and Chrome */
+	column-gap: $cln-gap;
+}
+@mixin column-rule($cln-rule) {
+	-moz-column-rule: $cln-rule; /* Firefox */
+	-webkit-column-rule: $cln-rule; /* Safari and Chrome */
+	column-rule: $cln-rule;
+}
+
+/* RADIO & CHECKBOX */
+@mixin radio-bullet($bullet-color) {
+	background-image: radial-gradient(
+		rgba($bullet-color, 1) 40%,
+		rgba($bullet-color, 0) 40%
+	);
+}
+@mixin checkbox-check($bg-color, $check-color) {
+	background-image:
+		radial-gradient(
+			rgba($bg-color, 0) 60%,
+			rgba($bg-color, 1) 60%
+		),
+		linear-gradient(
+			to top left,
+			rgba($check-color, 0) 42%,
+			rgba($check-color, 1) 42%,
+			rgba($check-color, 1) 58%,
+			rgba($check-color, 0) 58%
+		),
+		linear-gradient(
+			to top right,
+			rgba($check-color, 0) 42%,
+			rgba($check-color, 1) 42%,
+			rgba($check-color, 1) 58%,
+			rgba($check-color, 0) 58%
+	);
+}
+
+/* COMMENTS */
+@mixin comment-color($comment-color) {
+	background-color: lighten($comment-color, 20%);
+  border-color: $comment-color;
+  color: darken($comment-color, 40%);
+
+  * {
+    color: darken($comment-color, 40%);
+  }
+
+  hr {
+    border-top: $comment-color;
+    border-bottom: lighten($comment-color, 40%);
+  }
+}

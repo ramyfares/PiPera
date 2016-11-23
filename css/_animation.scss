@@ -1,0 +1,36 @@
+/* ANIMATION */
+/* FADE IN */
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.fade-in { // CUSTOMIZABLE FADE IN EFFECT
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1; // PLAYS ONCE
+}
+
+/* ROTATE */
+@keyframes rotate360 {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.rotate { // CUSTOMIZE ROTATE 360deg EFFECT
+  animation: rotate360 2s linear;
+  animation-iteration-count: infinite; // PLAYS FOREVER
+}

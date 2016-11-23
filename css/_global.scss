@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/* GLOBAL */
+*, html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+
+  box-sizing: border-box;
+
+  background-repeat: no-repeat;
+}
+::-moz-selection { /* Code for Firefox */
+  color: $clrwhite;
+  background: rgba($clrblack, 0.5);
+}
+::selection {
+  color: $clrwhite;
+  background: rgba($clrblack, 0.5);
+}
+
+html {
+  position: relative;
+}
+body {
+  @extend html;
+
+  min-height: 100vh;
+
+  background-color: $clrwhite;
+  font-size: 1em;
+  color: $clrblack;
+}
+
+table {
+  border-collapse: collapse;
+}
+caption, th, td, dt, dd {
+}
+form legend {
+  display: none;
+}
+blockquote,
+q,
+.quote {
+  quotes: "" "";
+  margin: 0.5rem auto;
+  padding: 2em 0;
+  background-color: rgba($clrblack, 0.05);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: "“";
+    flex: 1 1 10%;
+    font-size: 6em;
+    display: inline-flex;
+    color: rgba($clrblack, 0.3);
+    padding: 0 0.25em;
+    text-align: center;
+  }
+
+  &:after {
+    @extend .quote:before;
+    content: "”";
+  }
+
+}
+ul {
+  list-style: none;
+}
+ol {
+  list-style-position: inside;
+}
+
+hr {
+  display: inherit;
+  visibility: inherit;
+  border: none;
+  border-top: 1px solid rgba($clrgrey, 0.5);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+br {
+  margin-top: 0.0em;
+  margin-bottom: 0.0em;
+}
+
+:focus {
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0.1em 0 0.1em;
+  font-weight: bolder;
+  color: $clrmain;
+
+  // -ms-word-break: break-all;
+  // word-break: break-all;
+  //
+  // word-break: break-word;
+  //
+  // -webkit-hyphens: auto;
+  // -moz-hyphens: auto;
+  // hyphens: auto;
+}
+h1 {
+  font-size: 2.4em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+p {
+  font-size: 1em;
+  padding: 0.25em 0 0.25em;
+  color: $clrblack;
+}
+a {
+  text-decoration: none;
+  color: $clr2nd;
+  transition: 0.2s all ease-in-out;
+  outline: 0;
+
+  &::visited {}
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: $clr2nd-lighter;
+  }
+}
+small {
+  font-size: 0.8em;
+  color: $clrgrey-black;
+}
+time {
+  @extend small;
+  color: $clrgrey-darker;
+}
+img {
+  color: $clrgrey-darker;
+}
+section {
+  display: block;
+  margin-bottom: 1em;
+}
+iframe {
+  width: 100%;
+  min-height: 25vmin;
+}
+
+code,
+samp,
+kbd,
+var {
+  @extend small;
+  font-family: monospace;
+}
