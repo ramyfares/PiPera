@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#5F686B;stroke-width:4;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#008594;stroke-width:6;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#5F686B;stroke-width:6;stroke-miterlimit:10;stroke-opacity:0;}
+	.st5{fill:none;stroke:#008594;stroke-width:6;stroke-miterlimit:10;stroke-opacity:0;}
+	.st6{fill:none;}
+	.st7{fill:#008594;fill-opacity:0;}
+	.st8{fill:#008594;}
+	.st9{fill:#FFFFFF;}
+</style>
+<g id="Layer_1_1_" class="st0">
+	<g class="st1">
+		<rect x="12" y="12" class="st2" width="36" height="36"/>
+		<polyline class="st3" points="17.1,32 23.7,38.3 42.9,21.2 		"/>
+	</g>
+</g>
+<g id="Layer_2" class="st0">
+	<g class="st1">
+		<rect x="12" y="12" class="st4" width="36" height="36"/>
+		<polyline class="st3" points="17.1,32 23.7,38.3 42.9,21.2 		"/>
+	</g>
+</g>
+<g id="Layer_3" class="st0">
+	<g class="st1">
+		<rect x="12" y="12" class="st2" width="36" height="36"/>
+		<polyline class="st5" points="17.1,32 23.7,38.3 42.9,21.2 		"/>
+	</g>
+</g>
+<g id="Layer_4" class="st0">
+	<g class="st1">
+		<rect class="st6" width="60" height="60"/>
+		<circle class="st2" cx="30" cy="30" r="16"/>
+		<circle class="st7" cx="30" cy="30" r="9"/>
+	</g>
+</g>
+<g id="Layer_5" class="st0">
+	<g class="st1">
+		<rect class="st6" width="60" height="60"/>
+		<circle class="st2" cx="30" cy="30" r="16"/>
+		<circle class="st8" cx="30" cy="30" r="9"/>
+	</g>
+</g>
+<g id="Layer_6">
+	<g>
+		<rect class="st6" width="60" height="60"/>
+		<circle class="st9" cx="30" cy="30" r="21"/>
+	</g>
+</g>
+</svg>
